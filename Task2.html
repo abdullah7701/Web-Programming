@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Button Styles</title>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Button Styles</h2>
+  <!-- Button definitions -->
+  <button type="button" class="btn btn-basic" onclick="displayMessage('Basic')">Basic</button>
+  <button type="button" class="btn btn-default" onclick="displayMessage('Default')">Default</button>
+  <button type="button" class="btn btn-primary" onclick="displayMessage('Primary')">Primary</button>
+  <button type="button" class="btn btn-success" onclick="displayMessage('Success')">Success</button>
+  <button type="button" class="btn btn-info" onclick="displayMessage('Info')">Info</button>
+  <button type="button" class="btn btn-warning" onclick="displayMessage('Warning')">Warning</button>
+  <button type="button" class="btn btn-danger" onclick="displayMessage('Danger')">Danger</button>
+  <button type="button" class="btn btn-link" onclick="displayMessage('Link')">Link</button>
+</div>
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+// JavaScript function to display a message
+function displayMessage(buttonName) {
+  alert('You clicked the ' + buttonName + ' button.');
+}
+</script>
+
+</body>
+</html>
