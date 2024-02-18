@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Table</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Number Table Generator</h5>
+
+        <p class="card-text">Enter a number to generate its table:</p>
+
+        <!-- Input for user to enter a number -->
+        <input type="number" id="userInput" class="form-control mb-2" placeholder="Enter a number">
+
+        <!-- Button to trigger the table generation -->
+        <button class="btn btn-primary" onclick="generateTable()">Generate Table</button>
+
+        <!-- Display area for the table -->
+        <div id="tableOutput" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function generateTable() {
+      var userInput = document.getElementById('userInput').value;
+      var outputDiv = document.getElementById('tableOutput');
+
+      // Clear previous content
+      outputDiv.innerHTML = '';
+
+      // Check if the input is a valid number
+      if (!isNaN(userInput) && userInput !== '') {
+        var number = parseInt(userInput);
+
+        // Generate and display the table
+        var tableHtml = '<table class="table"><thead><tr><th>Multiplier</th><th>Result</th></tr></thead><tbody>';
+        for (var i = 1; i <= 10; i++) {
+          var result = number * i;
+          tableHtml += `<tr><td>${i}</td><td>${result}</td></tr>`;
+        }
+        tableHtml += '</tbody></table>';
+
+        outputDiv.innerHTML = tableHtml;
+      } else {
+        // Display an error message for invalid input
+        outputDiv.innerHTML = '<p class="text-danger">Invalid input. Please enter a valid number.</p>';
+      }
+    }
+  </script>
+
+</body>
+</html>
