@@ -5,6 +5,7 @@ Task 1
 ![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/58d335da-1d1a-40d5-b051-27434dc0c75a)
 
 Task 2
+
 ![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/0eb1f34f-db26-4a93-8d07-8d4304401229)
 
 ![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/939256a2-7572-465c-82b6-714c6693c4fe)
@@ -12,3 +13,6 @@ Task 2
 ![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/09400e2f-d0d7-4348-9bb7-8df09efb9ca5)
 
 
+Task 3
+
+![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/8ab29744-5ffc-432e-a86a-681b0dbff9af)
