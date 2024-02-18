@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Days in a Month</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* Set background color */
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .container h2 {
+      color: #333;
+    }
+
+    .container form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .container input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+    }
+
+    .container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .container p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .container button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Find Days in a Month</h2>
+    <form>
+      <input type="text" id="month" placeholder="Enter month (e.g., Jan, Feb)">
+      <button type="button" onclick="getDaysInMonth()">Submit</button>
+    </form>
+
+    <p id="days"></p>
+  </div>
+
+  <script>
+    function getDaysInMonth() {
+      var month = document.getElementById('month').value.trim().toLowerCase();
+      var days;
+
+      switch (month) {
+        case 'jan':
+        case 'mar':
+        case 'may':
+        case 'jul':
+        case 'aug':
+        case 'oct':
+        case 'dec':
+          days = 31;
+          break;
+        case 'apr':
+        case 'jun':
+        case 'sep':
+        case 'nov':
+          days = 30;
+          break;
+        case 'feb':
+          days = 28;
+          break;
+        default:
+          days = 'Invalid month';
+      }
+
+      document.getElementById('days').innerHTML = days;
+    }
+  </script>
+
+</body>
+</html>
