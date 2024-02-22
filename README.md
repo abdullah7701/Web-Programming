@@ -1,32 +1,12 @@
 # Web-Programming
-# Web-Programming
 Welcome to the Web Programming Assignments repository! This repository contains a collection of assignments completed during my web programming course.
-Each assignment is designed to showcase various web development skills, including HTML, CSS, JavaScript, and other relevant technologies.
 
+Task 1
 
+![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/face706b-3bfd-4fa6-9da6-f3dbc5f41685)
 
-Getting Started
-Each assignment folder contains the source code, along with any necessary resources and instructions. Feel free to explore the assignments, and don't hesitate to reach out if you have any questions or feedback.
+![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/b52510a0-c074-4a30-9450-eef482f863ad)
 
-How to Use
-Clone the repository to your local machine.
-Navigate to the specific assignment folder.
-Follow the README or instructions provided to set up and run the project.
-Explore the source code to understand the implementation details.
-Feel free to modify and experiment with the code to enhance your learning.
-Technologies Used
-HTML
-CSS
-JavaScript
-Bootstrap
-
-
-
-
-Feedback
-If you have any suggestions, improvements, or feedback, please open an issue or submit a pull request. 
-Your contributions are highly appreciated!
-
-
+![image](https://github.com/abdullah7701/Web-Programming/assets/81309380/466e65e5-1cf4-4663-93e3-083bd338940e)
 
 
