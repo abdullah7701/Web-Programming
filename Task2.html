@@ -1,0 +1,280 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="mt-4">Sign Up Form</h2>
+
+    <form id="signupForm" onsubmit="validateForm(); return false;" class="mt-4">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+            <span id="usernameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+            <span id="passwordError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" class="form-control" required>
+            <span id="birthdateError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" class="form-control" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <span id="genderError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" pattern="\d{10}" class="form-control" required>
+            <span id="phoneError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode" pattern="\d{5}" class="form-control" required>
+            <span id="zipcodeError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" class="form-control" required>
+            <span id="countryError" class="error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function validateForm() {
+            
+            clearErrors();
+
+            
+            validateUsername();
+            validatePassword();
+            validateBirthdate();
+            validateEmail();
+            validateGender();
+            validatePhone();
+            validateZipcode();
+            validateCountry();
+        }
+
+        function clearErrors() {
+            var errorElements = document.getElementsByClassName("error");
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].textContent = "";
+            }
+        }
+
+        function validateUsername() {
+    var username = document.getElementById('username').value;
+    var usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;  
+
+    if (!usernameRegex.test(username)) {
+        alert('Invalid username. Please use only letters, numbers, and underscores. Length: 3-20 characters.');
+        return false;
+    }
+
+    return true;
+}
+
+function validatePassword() {
+    var password = document.getElementById('password').value;
+
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        return false;
+    }
+
+    
+
+    return true;
+}
+
+
+function validateBirthdate() {
+    var birthdate = document.getElementById('birthdate').value;
+    var birthdateRegex = /^\d{4}-\d{2}-\d{2}$/;  
+
+    if (!birthdateRegex.test(birthdate)) {
+        alert('Invalid birthdate format. Please use YYYY-MM-DD format.');
+        return false;
+    }
+
+    return true;
+}
+
+function validateEmail() {
+    var email = document.getElementById('email').value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+        alert('Invalid email format. Please enter a valid email address.');
+        return false;
+    }
+
+    return true;
+}
+
+function validateGender() {
+    var gender = document.querySelector('input[name="gender"]:checked');
+
+    if (!gender) {
+        alert('Please select a gender.');
+        return false;
+    }
+
+    return true;
+}
+
+function validatePhone() {
+    var phone = document.getElementById('phone').value;
+    var phoneRegex = /^\d{10}$/;  
+
+    if (!phoneRegex.test(phone)) {
+        alert('Invalid phone number. Please enter a 10-digit numeric phone number.');
+        return false;
+    }
+
+    return true;
+}
+
+function validateZipcode() {
+    var zipcode = document.getElementById('zipcode').value;
+    var zipcodeRegex = /^\d{5}$/;  
+
+    if (!zipcodeRegex.test(zipcode)) {
+        alert('Invalid zip code. Please enter a 5-digit numeric zip code.');
+        return false;
+    }
+
+    return true;
+}
+
+function validateCountry() {
+    var country = document.getElementById('country').value;
+
+    
+    var validCountries = ["USA", "Canada", "United Kingdom", "Germany", "France", "Japan", "Australia", "Brazil", "India", "South Africa"];
+
+    
+    country = country.toUpperCase();
+
+    
+    if (!validCountries.includes(country)) {
+        alert('Please enter a valid country.');
+        return false;
+    }
+
+    return true;
+}
+
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="mt-4">Sign In</h2>
+
+    <form id="signInForm" onsubmit="validateSignIn(); return false;" class="mt-4">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+            <span id="usernameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+            <span id="passwordError" class="error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     
+</body>
+</html>
