@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Class and ID</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("*").click(function(){
+        var classes = $(this).attr("class");
+        var id = $(this).attr("id");
+        alert("Class: " + classes + ", ID: " + id);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="demo" class="sampleClass">Demo</div>
+</body>
+</html>

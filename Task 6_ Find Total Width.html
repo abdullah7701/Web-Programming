@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Total Width of an Element</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var totalWidth = $("#myText").outerWidth();
+      alert("Total Width: " + totalWidth);
+    });
+  </script>
+  <style>
+    p {
+      padding-top: 50px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+      padding-left: 80px;
+    }
+  </style>
+</head>
+<body>
+  <p id="myText">jQuery work, solutions, Tasks</p>
+</body>
+</html>
