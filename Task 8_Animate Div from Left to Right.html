@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("div").animate({left: '250px'}, 8000);
+      });
+    });
+  </script>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <button>Animate</button>
+  <div></div>
+</body>
+</html>
