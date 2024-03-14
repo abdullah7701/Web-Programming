@@ -1,0 +1,33 @@
+HTML: Comments in HTML are written using <!-- -->. 
+Anything written within these tags is considered a comment and won't be rendered in the browser.
+
+Example
+<!-- This is a comment in HTML -->
+<p>This paragraph will be displayed.</p>
+
+
+_______________________
+
+CSS: Comments in CSS are written using /* */. Anything 
+written within these tags is considered a comment and won't affect the styling.
+
+Example:
+/* This is a comment in CSS */
+p {
+    color: red;
+}
+
+
+_______________________
+JavaScript: Comments in JavaScript are written using // for single-line comments 
+and /* */ for multi-line comments.
+
+Example:
+// This is a single-line comment in JavaScript
+
+/*
+This is a
+multi-line comment
+in JavaScript
+*/
+
